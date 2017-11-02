@@ -3,7 +3,15 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.27004.2006
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GraphCache", "GraphCache\GraphCache.csproj", "{87F052EE-081B-425E-BB83-56E4D134CF73}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GraphCache.Core", "GraphCache\GraphCache.Core.csproj", "{87F052EE-081B-425E-BB83-56E4D134CF73}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{AE92CF73-FAE0-476C-8B76-C215C785069B}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "tests", "tests", "{ED550D8A-601C-4F49-AC59-FF8CFEFF6344}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GraphCache.Object", "GraphCache.Object\GraphCache.Object.csproj", "{BF30507C-0749-418A-9AFA-BD029420EFE4}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GraphCache.Json", "GraphCache.Json\GraphCache.Json.csproj", "{D1F04AFA-701B-4CF2-AE7B-B26F16E89F45}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,9 +23,22 @@ Global
 		{87F052EE-081B-425E-BB83-56E4D134CF73}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{87F052EE-081B-425E-BB83-56E4D134CF73}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{87F052EE-081B-425E-BB83-56E4D134CF73}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BF30507C-0749-418A-9AFA-BD029420EFE4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BF30507C-0749-418A-9AFA-BD029420EFE4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BF30507C-0749-418A-9AFA-BD029420EFE4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BF30507C-0749-418A-9AFA-BD029420EFE4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D1F04AFA-701B-4CF2-AE7B-B26F16E89F45}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D1F04AFA-701B-4CF2-AE7B-B26F16E89F45}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D1F04AFA-701B-4CF2-AE7B-B26F16E89F45}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D1F04AFA-701B-4CF2-AE7B-B26F16E89F45}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{87F052EE-081B-425E-BB83-56E4D134CF73} = {AE92CF73-FAE0-476C-8B76-C215C785069B}
+		{BF30507C-0749-418A-9AFA-BD029420EFE4} = {AE92CF73-FAE0-476C-8B76-C215C785069B}
+		{D1F04AFA-701B-4CF2-AE7B-B26F16E89F45} = {AE92CF73-FAE0-476C-8B76-C215C785069B}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {FFBCC575-8583-422F-9880-A9FF3DA0BA1F}
