@@ -8,7 +8,7 @@ namespace GraphCache.Core
     {
         public abstract string Key { get; }
 
-        protected abstract T GetValue(T owner);
-        public abstract void SetValeu(T owner, object value);
+        public abstract T GetValue(T owner);
+        public abstract void SetValue(T owner, object value);
     }
 }

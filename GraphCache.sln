@@ -3,15 +3,17 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.27004.2006
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GraphCache.Core", "GraphCache\GraphCache.Core.csproj", "{87F052EE-081B-425E-BB83-56E4D134CF73}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "GraphCache.Core", "GraphCache\GraphCache.Core.csproj", "{87F052EE-081B-425E-BB83-56E4D134CF73}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{AE92CF73-FAE0-476C-8B76-C215C785069B}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "tests", "tests", "{ED550D8A-601C-4F49-AC59-FF8CFEFF6344}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GraphCache.Object", "GraphCache.Object\GraphCache.Object.csproj", "{BF30507C-0749-418A-9AFA-BD029420EFE4}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "GraphCache.Object", "GraphCache.Object\GraphCache.Object.csproj", "{BF30507C-0749-418A-9AFA-BD029420EFE4}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GraphCache.Json", "GraphCache.Json\GraphCache.Json.csproj", "{D1F04AFA-701B-4CF2-AE7B-B26F16E89F45}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "GraphCache.Json", "GraphCache.Json\GraphCache.Json.csproj", "{D1F04AFA-701B-4CF2-AE7B-B26F16E89F45}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GraphCache.Object.Tests", "GraphCache.Object.Tests\GraphCache.Object.Tests.csproj", "{2D4C6C62-4BCB-4A9E-B94D-434FBD564DD2}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -31,6 +33,10 @@ Global
 		{D1F04AFA-701B-4CF2-AE7B-B26F16E89F45}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{D1F04AFA-701B-4CF2-AE7B-B26F16E89F45}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{D1F04AFA-701B-4CF2-AE7B-B26F16E89F45}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2D4C6C62-4BCB-4A9E-B94D-434FBD564DD2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2D4C6C62-4BCB-4A9E-B94D-434FBD564DD2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2D4C6C62-4BCB-4A9E-B94D-434FBD564DD2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2D4C6C62-4BCB-4A9E-B94D-434FBD564DD2}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -39,6 +45,7 @@ Global
 		{87F052EE-081B-425E-BB83-56E4D134CF73} = {AE92CF73-FAE0-476C-8B76-C215C785069B}
 		{BF30507C-0749-418A-9AFA-BD029420EFE4} = {AE92CF73-FAE0-476C-8B76-C215C785069B}
 		{D1F04AFA-701B-4CF2-AE7B-B26F16E89F45} = {AE92CF73-FAE0-476C-8B76-C215C785069B}
+		{2D4C6C62-4BCB-4A9E-B94D-434FBD564DD2} = {ED550D8A-601C-4F49-AC59-FF8CFEFF6344}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {FFBCC575-8583-422F-9880-A9FF3DA0BA1F}
