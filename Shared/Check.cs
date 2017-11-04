@@ -24,5 +24,15 @@ namespace GraphCache
 
             return value;
         }
+
+        internal static int GreaterThanZero(int value, string parameterName)
+        {
+            if (value < 0)
+            {
+                throw new ArgumentOutOfRangeException(parameterName);
+            }
+
+            return value;
+        }
     }
 }

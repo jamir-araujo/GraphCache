@@ -12,7 +12,7 @@ namespace GraphCache.Object.Tests
 
         public DirectDependencyTests()
         {
-            _propertyAccessorMock = new Mock<PropertyAccessor>();
+            _propertyAccessorMock = new Mock<PropertyAccessor>(MockBehavior.Strict);
             _defaultKey = "key = 1";
 
             _directDependency = new DirectDependency(_propertyAccessorMock.Object, _defaultKey);
