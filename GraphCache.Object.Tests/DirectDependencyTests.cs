@@ -49,10 +49,10 @@ namespace GraphCache.Object.Tests
         }
 
         [Fact]
-        public void GetValeu_Should_ReturnTheValueReturnedFromPropertyAccessor()
+        public void GetValeu_Should_ReturnTheValueReturnedByPropertyAccessor()
         {
-            var owner = new { Data = "owner" };
-            var value = new { Data = "value" };
+            var owner = new object();
+            var value = new object();
 
             _propertyAccessorMock
                 .Setup(pa => pa.GetValue(owner))
@@ -80,8 +80,8 @@ namespace GraphCache.Object.Tests
         [Fact]
         public void SetValue_Should_CallSetValueOnPropertyAccessor()
         {
-            var owner = new { Data = "owner" };
-            var value = new { Data = "value" };
+            var owner = new object();
+            var value = new object();
 
             _propertyAccessorMock
                 .Setup(pa => pa.SetValue(owner, value))

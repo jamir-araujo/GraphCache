@@ -2,41 +2,40 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
-using System.Text;
 using Xunit;
 
 namespace GraphCache.Object.Tests
 {
-    public class IndexedDirectDependencyTests
+    public class DirectIndexedDependencyTests
     {
         private readonly Mock<PropertyAccessor> _propertyAccessorMock;
         private readonly Mock<IList> _listMock;
         private readonly string _defaultKey;
         private readonly int _index;
         private readonly object _owner;
-        private readonly IndexedDirectDependency _indexedDirectDependency;
+        private readonly DirectIndexedDependency _indexedDirectDependency;
 
-        public IndexedDirectDependencyTests()
+        public DirectIndexedDependencyTests()
         {
             _propertyAccessorMock = new Mock<PropertyAccessor>(MockBehavior.Strict);
             _listMock = new Mock<IList>(MockBehavior.Strict);
             _defaultKey = "key = 1";
             _index = 0;
-            _owner = new { Data = "test" };
+            _owner = new object();
 
-            _indexedDirectDependency = new IndexedDirectDependency(_propertyAccessorMock.Object, _index, _defaultKey);
+            _indexedDirectDependency = new DirectIndexedDependency(_propertyAccessorMock.Object, _index, _defaultKey);
         }
 
         [Fact]
         public void Constructor_Should_Throw_When_PropertyAccessorIsNull()
         {
-            Assert.Throws<ArgumentNullException>("propertyAccessor", () => new IndexedDirectDependency(null, 0, _defaultKey));
+            Assert.Throws<ArgumentNullException>("propertyAccessor", () => new DirectIndexedDependency(null, 0, _defaultKey));
         }
 
         [Fact]
         public void Constructor_Should_Throw_When_IndexIsLessThanZero()
         {
-            Assert.Throws<ArgumentOutOfRangeException>("index", () => new IndexedDirectDependency(_propertyAccessorMock.Object, -1, _defaultKey));
+            Assert.Throws<ArgumentOutOfRangeException>("index", () => new DirectIndexedDependency(_propertyAccessorMock.Object, -1, _defaultKey));
         }
 
         [Theory]
@@ -45,14 +44,14 @@ namespace GraphCache.Object.Tests
         [InlineData("   ")]
         public void Constructor_Should_Throw_When_KeyIsNullEmptyOrWhiteSpaces(string key)
         {
-            Assert.Throws<ArgumentNullException>("key", () => new IndexedDirectDependency(_propertyAccessorMock.Object, 0, key));
+            Assert.Throws<ArgumentNullException>("key", () => new DirectIndexedDependency(_propertyAccessorMock.Object, 0, key));
         }
 
         [Fact]
         public void Key_Should_HaveTheValuePassedOnConstructor()
         {
             var key = "key";
-            var dependency = new IndexedDirectDependency(_propertyAccessorMock.Object, 0, key);
+            var dependency = new DirectIndexedDependency(_propertyAccessorMock.Object, 0, key);
 
             Assert.Equal(dependency.Key, key);
         }

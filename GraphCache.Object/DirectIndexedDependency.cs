@@ -4,7 +4,7 @@ using static GraphCache.Check;
 
 namespace GraphCache.Object
 {
-    public class IndexedDirectDependency : Dependency<object>
+    public class DirectIndexedDependency : Dependency<object>
     {
         private readonly PropertyAccessor _propertyAccessor;
         private readonly int _index;
@@ -12,7 +12,7 @@ namespace GraphCache.Object
 
         public override string Key => _key;
 
-        public IndexedDirectDependency(PropertyAccessor propertyAccessor, int index, string key)
+        public DirectIndexedDependency(PropertyAccessor propertyAccessor, int index, string key)
         {
             NotNull(propertyAccessor, nameof(propertyAccessor));
             GreaterThanZero(index, nameof(index));
