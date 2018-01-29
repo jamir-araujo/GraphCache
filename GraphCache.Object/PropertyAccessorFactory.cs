@@ -9,7 +9,7 @@ namespace GraphCache.Object
         PropertyAccessor Create(PropertyInfo property);
     }
 
-    public class PropertyAccessorFactory : IPropertyAccessorFactory
+    internal class PropertyAccessorFactory : IPropertyAccessorFactory
     {
         private static MethodInfo _generatePropertyAccessorMethodInfo = typeof(PropertyAccessorFactory)
             .GetMethod(nameof(GeneratePropertyAccessor), BindingFlags.Static | BindingFlags.NonPublic);

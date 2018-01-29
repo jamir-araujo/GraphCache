@@ -3,7 +3,7 @@ using static GraphCache.Check;
 
 namespace GraphCache.Object
 {
-    public class DirectDependency : Dependency<object>
+    internal class DirectDependency : Dependency<object>
     {
         private PropertyAccessor _propertyAccessor;
         private string _key;

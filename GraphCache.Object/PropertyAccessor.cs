@@ -4,7 +4,7 @@ using static GraphCache.Check;
 
 namespace GraphCache.Object
 {
-    public abstract class PropertyAccessor
+    internal abstract class PropertyAccessor
     {
         public abstract PropertyInfo PropertyInfo { get; }
 
@@ -12,7 +12,7 @@ namespace GraphCache.Object
         public abstract void SetValue(object owner, object value);
     }
 
-    public class PropertyAccessor<TOwner, TProperty> : PropertyAccessor
+    internal class PropertyAccessor<TOwner, TProperty> : PropertyAccessor
     {
         private readonly Func<TOwner, TProperty> _getter;
         private readonly Action<TOwner, TProperty> _setter;

@@ -3,7 +3,7 @@ using static GraphCache.Check;
 
 namespace GraphCache.Object.Tests
 {
-    public class ChainedDependency : Dependency<object>
+    internal class ChainedDependency : Dependency<object>
     {
         private readonly PropertyAccessor _propertyAccessor;
         private readonly Dependency<object> _dependency;

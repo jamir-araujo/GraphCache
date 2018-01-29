@@ -4,7 +4,7 @@ using static GraphCache.Check;
 
 namespace GraphCache.Object
 {
-    public class DirectIndexedDependency : Dependency<object>
+    internal class DirectIndexedDependency : Dependency<object>
     {
         private readonly PropertyAccessor _propertyAccessor;
         private readonly int _index;
