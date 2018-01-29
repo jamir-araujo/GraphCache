@@ -6,14 +6,7 @@ namespace GraphCache.Object
 {
     public abstract class PropertyAccessor
     {
-        public PropertyInfo PropertyInfo { get; }
-
-        protected PropertyAccessor(PropertyInfo propertyInfo)
-        {
-            NotNull(propertyInfo, nameof(propertyInfo));
-
-            PropertyInfo = propertyInfo;
-        }
+        public abstract PropertyInfo PropertyInfo { get; }
 
         public abstract object GetValue(object owner);
         public abstract void SetValue(object owner, object value);
@@ -21,18 +14,23 @@ namespace GraphCache.Object
 
     public class PropertyAccessor<TOwner, TProperty> : PropertyAccessor
     {
-        private Func<TOwner, TProperty> _getter;
-        private Action<TOwner, TProperty> _setter;
+        private readonly Func<TOwner, TProperty> _getter;
+        private readonly Action<TOwner, TProperty> _setter;
+        private readonly PropertyInfo _propertyInfo;
+
+        public override PropertyInfo PropertyInfo => _propertyInfo;
 
         public PropertyAccessor(PropertyInfo propertyInfo, Func<TOwner, TProperty> getter, Action<TOwner, TProperty> setter)
-            : base(propertyInfo)
         {
             NotNull(getter, nameof(getter));
             NotNull(setter, nameof(setter));
+            NotNull(propertyInfo, nameof(propertyInfo));
 
             _getter = getter;
             _setter = setter;
+            _propertyInfo = propertyInfo;
         }
+
 
         public override object GetValue(object owner)
         {
